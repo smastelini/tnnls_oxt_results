@@ -1,0 +1,31 @@
+%Add to preamble: \usepackage{booktabs, makecell}
+\begin{table}[!htb]
+	\centering
+	\caption{Characteristics of the evaluated datasets.}
+	\label{tab_datasets}
+	\resizebox{0.45\textwidth}{!}{
+	\begin{tabular}{lrrrr}
+		\toprule
+		Dataset & \#Instances & \thead{\#Numeric\\features} & \thead{\#Categorical\\features} & Mean $\pm$ Std. \\
+		\midrule
+		$Abalone$ & $4977$ & $7$ & $1$ & $10.0665 \pm 3.3248$\\
+		$Ailerons$ & $13750$ & $40$ & $0$ & $-0.0009 \pm 0.0004$\\
+		$Bike$ & $17379$ & $12$ & $0$ & $189.4631 \pm 181.3876$\\
+		$CalHousing$ & $20500$ & $8$ & $0$ & $207502.1242 \pm 115206.7820$\\
+		$Elevators$ & $16599$ & $18$ & $0$ & $0.0216 \pm 0.0067$\\
+		$House8L$ & $22784$ & $8$ & $0$ & $50074.4398 \pm 52843.4756$\\
+		$House16H$ & $22784$ & $16$ & $0$ & $50074.4398 \pm 52843.4756$\\
+		$Metro$ & $48204$ & $4$ & $3$ & $3259.8184 \pm 1986.8607$\\
+		$Pol$ & $15600$ & $48$ & $0$ & $29.0647 \pm 41.7947$\\
+		$Wind$ & $6574$ & $12$ & $2$ & $15.5995 \pm 6.6979$\\
+		$Wine$ & $5298$ & $11$ & $0$ & $5.8713 \pm 0.8907$\\
+		$Puma8NH$ & $8192$ & $8$ & $0$ & $1.1620 \pm 5.6223$\\
+		$Puma32H$ & $8192$ & $32$ & $0$ & $0.0004 \pm 0.0303$\\
+		$Hyper(A)$ & $500000$ & $10$ & $0$ & $31.1750 \pm 7.4825$\\
+		$Hyper(G)$ & $500000$ & $10$ & $0$ & $31.1763 \pm 7.4836$\\
+		$Hyper(I)$ & $500000$ & $10$ & $0$ & $-63.5742 \pm 93.8206$\\
+		$RBF(A)$ & $500000$ & $20$ & $0$ & $50.2017 \pm 28.2661$\\
+		$RBF(G)$ & $500000$ & $20$ & $0$ & $50.1989 \pm 28.2705$\\
+		\bottomrule
+	\end{tabular}}
+\end{table}
