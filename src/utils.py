@@ -9,8 +9,8 @@ from river import rules
 from river import stats
 from river import tree
 
-# sys.path.append("../online_extra_trees/")
-sys.path.append("../../online_extra_trees/")
+sys.path.append("../online_extra_trees/")
+# sys.path.append("../../online_extra_trees/")
 
 from river_.ensemble import ExtraTreesRegressor
 
@@ -95,28 +95,46 @@ N_REPS = 5
 
 
 MODELS = {
-    "HT": tree.HoeffdingTreeRegressor(
-        splitter=tree.splitter.TEBSTSplitter(digits=1),
-        leaf_prediction="adaptive"
-    ),
-    #"HAT": tree.HoeffdingAdaptiveTreeRegressor(
+    # "HT": tree.HoeffdingTreeRegressor(
+    #     splitter=tree.splitter.TEBSTSplitter(digits=1),
+    #     leaf_prediction="adaptive"
+    # ),
+    # #"HAT": tree.HoeffdingAdaptiveTreeRegressor(
+    # #    splitter=tree.splitter.TEBSTSplitter(digits=1),
+    # #    leaf_prediction="adaptive",
+    # #    seed=42,
+    # #    bootstrap_sampling=True
+    # #),
+    # "AMRules": rules.AMRules(
+    #     drift_detector=drift.ADWIN(),
+    #     splitter=tree.splitter.TEBSTSplitter(digits=1)
+    # ),
+    # "ARF-abs": ensemble.AdaptiveRandomForestRegressor(
+    #     n_models=20,
+    #     leaf_prediction="adaptive",
+    #     splitter=tree.splitter.TEBSTSplitter(digits=1),
+    #     seed=42
+    # ),
+    # "XT": ExtraTreesRegressor(
+    #     n_models=20,
+    #     seed=42,
+    #     track_metric=metrics.RMSE(),
+    #     resampling_strategy="subbagging",
+    #     resampling_rate=0.5,
+    #     disable_weighted_vote=False,
+    #     leaf_prediction="adaptive",
+    #     split_confidence=0.05,
+    #     merit_preprune=False,
+    # ),
+    # Using the mean prediction
+    #"ARF-abs-mean": ensemble.AdaptiveRandomForestRegressor(
+    #    n_models=20,
+    #    leaf_prediction="mean",
     #    splitter=tree.splitter.TEBSTSplitter(digits=1),
-    #    leaf_prediction="adaptive",
-    #    seed=42,
-    #    bootstrap_sampling=True
+    #    seed=42
     #),
-    "AMRules": rules.AMRules(
-        drift_detector=drift.ADWIN(),
-        splitter=tree.splitter.TEBSTSplitter(digits=1)
-    ),
-    "ARF-abs": ensemble.AdaptiveRandomForestRegressor(
-        n_models=20,
-        leaf_prediction="adaptive",
-        splitter=tree.splitter.TEBSTSplitter(digits=1),
-        seed=42
-    ),
-    "XT": ExtraTreesRegressor(
-        n_models=20,
+    "XT-mean": ExtraTreesRegressor(
+       n_models=20,
         seed=42,
         track_metric=metrics.RMSE(),
         resampling_strategy="subbagging",
@@ -125,23 +143,8 @@ MODELS = {
         leaf_prediction="adaptive",
         split_confidence=0.05,
         merit_preprune=False,
+        leaf_prediction="mean"
     ),
-    # Using the mean prediction
-    #"ARF-abs-mean": ensemble.AdaptiveRandomForestRegressor(
-    #    n_models=20,
-    #    leaf_prediction="mean",
-    #    splitter=tree.splitter.TEBSTSplitter(digits=1),
-    #    seed=42
-    #),
-    #"XT-mean": ExtraTreesRegressor(
-    #    n_models=20,
-    #    seed=42,
-    #    track_metric=metrics.RMSE(),
-    #    resampling_strategy="subbagging",
-    #    resampling_rate=0.5,
-    #    disable_weighted_vote=False,
-    #    leaf_prediction="mean",
-    #),
 }
 
 

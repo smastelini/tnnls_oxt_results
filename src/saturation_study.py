@@ -124,6 +124,7 @@ if not os.path.exists(f"{OUT_PATH}/saturation"):
 #saturate("ARF-abs", "friedman_lea", init_models=90, final_models=100)
 #saturate("XT", "friedman_gsg")
 #saturate("ARF-abs-mean", "friedman_gra")
-saturate("XT", "friedman_gra")
+# saturate("XT", "friedman_gra")
+saturate("XT-mean", "friedman_gra")
 
 
