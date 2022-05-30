@@ -1,0 +1,22 @@
+\begin{figure}
+\centering
+\begin{tikzpicture}[xscale=2]
+\node (Label) at (2.249986420331607, 0.7){\tiny{CD = 1.00}}; % the label
+\draw[decorate,decoration={snake,amplitude=.4mm,segment length=1.5mm,post length=0mm},very thick, color = black] (1.5,0.5) -- (2.9999728406632142,0.5);
+\foreach \x in {1.5, 2.9999728406632142} \draw[thick,color = black] (\x, 0.4) -- (\x, 0.6);
+ 
+\draw[gray, thick](1.5,0) -- (6.0,0);
+\foreach \x in {1.5,3.0,4.5,6.0} \draw (\x cm,1.5pt) -- (\x cm, -1.5pt);
+\node (Label) at (1.5,0.2){\tiny{1}};
+\node (Label) at (3.0,0.2){\tiny{2}};
+\node (Label) at (4.5,0.2){\tiny{3}};
+\node (Label) at (6.0,0.2){\tiny{4}};
+\draw[decorate,decoration={snake,amplitude=.4mm,segment length=1.5mm,post length=0mm},very thick, color = black](3.4272727272727277,-0.25) -- (4.209090909090909,-0.25);
+\node (Point) at (1.5, 0){};\node (Label) at (0.5,-0.45){\scriptsize{AMRules}}; \draw (Point) |- (Label);
+\node (Point) at (3.4772727272727275, 0){};\node (Label) at (0.5,-0.75){\scriptsize{HT}}; \draw (Point) |- (Label);
+\node (Point) at (5.863636363636363, 0){};\node (Label) at (6.5,-0.45){\scriptsize{ARF}}; \draw (Point) |- (Label);
+\node (Point) at (4.159090909090909, 0){};\node (Label) at (6.5,-0.75){\scriptsize{OXT}}; \draw (Point) |- (Label);
+\end{tikzpicture}
+\caption{Nemenyi - eager time.csv}
+\label{fig:nemenyi}
+\end{figure}
