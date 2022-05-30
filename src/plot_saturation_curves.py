@@ -25,7 +25,7 @@ def plot_saturation_curves(dataset_name):
             
             fig, ax = plt.subplots(figsize=(5, 10), nrows=4, dpi=600)
             ax[0].plot(m_rf["n_samples"], m_rf["RMSE"], c="blue", marker="s", label="ARF", markevery=0.1)
-            ax[0].plot(m_xt["n_samples"], m_xt["RMSE"], c="black", marker="X", label="XT", markevery=0.1)
+            ax[0].plot(m_xt["n_samples"], m_xt["RMSE"], c="black", marker="X", label="OXT", markevery=0.1)
             ax[1].plot(m_rf["n_samples"], m_rf["R2"], c="blue", marker="s", markevery=0.1)
             ax[1].plot(m_xt["n_samples"], m_xt["R2"], c="black", marker="X", markevery=0.1)
             ax[2].plot(m_rf["n_samples"], m_rf["memory"], c="blue", marker="s", markevery=0.1)

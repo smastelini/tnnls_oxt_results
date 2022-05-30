@@ -64,7 +64,7 @@ def plot_saturation_curves(dataset_name):
     ax[3].set_ylabel("Total resampling weight")
 
     ax[0].legend()
-    ax[0].set_title(f"ARF x XT: tree properties")
+    ax[0].set_title(f"ARF x OXT: tree properties")
     for tick in ax[3].get_xticklabels():
         tick.set_rotation(30)
         tick.set_ha("right")
