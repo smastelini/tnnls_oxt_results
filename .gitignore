@@ -133,3 +133,5 @@ dmypy.json
 online_extra_trees/
 river/
 datasets/*.csv
+
+.DS_Store
