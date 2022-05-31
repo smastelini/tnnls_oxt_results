@@ -96,3 +96,4 @@ if __name__ == "__main__":
     plot_saturation_curves("friedman_lea")
     plot_saturation_curves("friedman_gra")
     plot_saturation_curves("friedman_gsg")
+    
