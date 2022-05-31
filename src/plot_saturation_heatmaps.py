@@ -53,7 +53,9 @@ def plot_saturation_heatmap(dataset_name):
 
     model_matcher = {
         "ARF-abs": "ARF",
-        "XT": "OXT"
+        "XT": "OXT",
+
+        # "ARF-abs-mean": "ARF"
     }
     plot_data = {}
 

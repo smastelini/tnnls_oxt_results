@@ -9,8 +9,8 @@ from river import rules
 from river import stats
 from river import tree
 
-sys.path.append("../online_extra_trees/")
-# sys.path.append("../../online_extra_trees/")
+# sys.path.append("../online_extra_trees/")
+sys.path.append("../../online_extra_trees/")
 
 from river_.ensemble import ExtraTreesRegressor
 
@@ -133,18 +133,17 @@ MODELS = {
     #    splitter=tree.splitter.TEBSTSplitter(digits=1),
     #    seed=42
     #),
-    "XT-mean": ExtraTreesRegressor(
-       n_models=20,
-        seed=42,
-        track_metric=metrics.RMSE(),
-        resampling_strategy="subbagging",
-        resampling_rate=0.5,
-        disable_weighted_vote=False,
-        leaf_prediction="adaptive",
-        split_confidence=0.05,
-        merit_preprune=False,
-        leaf_prediction="mean"
-    ),
+    # "XT-mean": ExtraTreesRegressor(
+    #    n_models=20,
+    #     seed=42,
+    #     track_metric=metrics.RMSE(),
+    #     resampling_strategy="subbagging",
+    #     resampling_rate=0.5,
+    #     disable_weighted_vote=False,
+    #     leaf_prediction="mean",
+    #     split_confidence=0.05,
+    #     merit_preprune=False,
+    # ),
 }
 
 
