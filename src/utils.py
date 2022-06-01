@@ -95,37 +95,37 @@ N_REPS = 5
 
 
 MODELS = {
-    # "HT": tree.HoeffdingTreeRegressor(
-    #     splitter=tree.splitter.TEBSTSplitter(digits=1),
-    #     leaf_prediction="adaptive"
-    # ),
-    # #"HAT": tree.HoeffdingAdaptiveTreeRegressor(
-    # #    splitter=tree.splitter.TEBSTSplitter(digits=1),
-    # #    leaf_prediction="adaptive",
-    # #    seed=42,
-    # #    bootstrap_sampling=True
-    # #),
-    # "AMRules": rules.AMRules(
-    #     drift_detector=drift.ADWIN(),
-    #     splitter=tree.splitter.TEBSTSplitter(digits=1)
-    # ),
-    # "ARF-abs": ensemble.AdaptiveRandomForestRegressor(
-    #     n_models=20,
-    #     leaf_prediction="adaptive",
-    #     splitter=tree.splitter.TEBSTSplitter(digits=1),
-    #     seed=42
-    # ),
-    # "XT": ExtraTreesRegressor(
-    #     n_models=20,
-    #     seed=42,
-    #     track_metric=metrics.RMSE(),
-    #     resampling_strategy="subbagging",
-    #     resampling_rate=0.5,
-    #     disable_weighted_vote=False,
-    #     leaf_prediction="adaptive",
-    #     split_confidence=0.05,
-    #     merit_preprune=False,
-    # ),
+    "HT": tree.HoeffdingTreeRegressor(
+        splitter=tree.splitter.TEBSTSplitter(digits=1),
+        leaf_prediction="adaptive"
+    ),
+    #"HAT": tree.HoeffdingAdaptiveTreeRegressor(
+    #    splitter=tree.splitter.TEBSTSplitter(digits=1),
+    #    leaf_prediction="adaptive",
+    #    seed=42,
+    #    bootstrap_sampling=True
+    #),
+    "AMRules": rules.AMRules(
+        drift_detector=drift.ADWIN(),
+        splitter=tree.splitter.TEBSTSplitter(digits=1)
+    ),
+    "ARF-abs": ensemble.AdaptiveRandomForestRegressor(
+        n_models=20,
+        leaf_prediction="adaptive",
+        splitter=tree.splitter.TEBSTSplitter(digits=1),
+        seed=42
+    ),
+    "XT": ExtraTreesRegressor(
+        n_models=20,
+        seed=42,
+        track_metric=metrics.RMSE(),
+        resampling_strategy="subbagging",
+        resampling_rate=0.5,
+        disable_weighted_vote=False,
+        leaf_prediction="adaptive",
+        split_confidence=0.05,
+        merit_preprune=False,
+    ),
     # Using the mean prediction
     #"ARF-abs-mean": ensemble.AdaptiveRandomForestRegressor(
     #    n_models=20,
