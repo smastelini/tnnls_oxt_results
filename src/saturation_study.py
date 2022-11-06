@@ -11,7 +11,7 @@ from river import preprocessing
 from river import stream
 from river import synth
 
-from utils import CAT_FEATURES, DATASETS, GENERATOR_BASED, IN_PATH, MAIN_SEED, MODELS, N_REPS, OUT_PATH
+from utils import CAT_FEATURES, GENERATOR_BASED, IN_PATH, MAIN_SEED, MODELS, N_REPS, OUT_PATH
 
 
 def prepare_data(dataset_name, seed=None):

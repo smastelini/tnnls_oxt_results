@@ -2,7 +2,7 @@ import os
 import datetime
 import pandas as pd
 
-from utils import DATASETS, MODELS, N_REPS, OUT_PATH
+from utils import N_REPS, OUT_PATH
 
 from parse_outputs import parse_file
 

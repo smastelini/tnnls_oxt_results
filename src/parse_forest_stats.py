@@ -1,5 +1,4 @@
 import os
-import datetime
 import pandas as pd
 
 from utils import DATASETS, N_REPS, OUT_PATH

@@ -7,7 +7,7 @@ from river import evaluate
 from river import metrics
 from river import preprocessing
 from river import stream
-from river import synth
+from river.datasets import synth
 
 from utils import BASELINES, CAT_FEATURES, DATASETS, GENERATOR_BASED, IN_PATH, MAIN_SEED, N_REPS, OUT_PATH
 

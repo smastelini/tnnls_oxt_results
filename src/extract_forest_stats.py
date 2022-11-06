@@ -9,7 +9,6 @@ from river import compose
 from river import preprocessing
 from river import stream
 from river import synth
-#from river.utils import warm_up_mode
 
 
 from utils import CAT_FEATURES, DATASETS, GENERATOR_BASED, IN_PATH, MAIN_SEED, MODELS, N_REPS, OUT_PATH

@@ -9,10 +9,8 @@ from river import rules
 from river import stats
 from river import tree
 
-# sys.path.append("../online_extra_trees/")
-sys.path.append("../../online_extra_trees/")
 
-from river_.ensemble import ExtraTreesRegressor
+from river_extra.ensemble import ExtraTreesRegressor
 
 
 IN_PATH = "../datasets"
